@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/array",
+      "handler": "array.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/array",
+      "handler": "array.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/array",
+      "handler": "array.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

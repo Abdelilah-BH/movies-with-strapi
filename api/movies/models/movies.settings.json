@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movies",
+  "info": {
+    "name": "Movies"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "original_title": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "integer",
+      "max": 10,
+      "min": 0,
+      "default": 0
+    },
+    "voice": {
+      "type": "float",
+      "default": 0
+    },
+    "duration": {
+      "type": "time"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "english",
+        "france"
+      ]
+    },
+    "country": {
+      "type": "enumeration",
+      "enum": [
+        "morocco",
+        "france"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "action"
+      ]
+    },
+    "quality": {
+      "type": "enumeration",
+      "enum": [
+        "_270p"
+      ]
+    },
+    "precession": {
+      "type": "enumeration",
+      "enum": [
+        "kids"
+      ]
+    },
+    "release_date": {
+      "type": "date"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "movie"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "subcategory": {
+      "model": "subcategories",
+      "via": "movies"
+    },
+    "trailer": {
+      "type": "string"
+    }
+  }
+}

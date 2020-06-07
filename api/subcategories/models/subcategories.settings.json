@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Sub_categories",
+  "info": {
+    "name": "Subcategories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "order": {
+      "type": "integer",
+      "unique": true
+    },
+    "movies": {
+      "via": "subcategory",
+      "collection": "movies"
+    }
+  }
+}
